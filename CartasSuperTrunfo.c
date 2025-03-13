@@ -1,24 +1,52 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-
-    printf("teste \n");
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+    // Declaração de variáveis para a primeira carta (Fortaleza)
+    char estado1 [20] = "Estados";
+    char complemento [20] = "unidos";
+    char codigo1[4] = "C01";
+    char nomeCidade1[50] = "Atlanta";
+    int populacao1 = 498044;
+    float area1 = 347.1;
+    float pib1 = 385.50;
+    int pontosTuristicos1 = 30;
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    // Declaração de variáveis para a segunda carta (Londrina)
+    char estado2[20] = "Paraná";
+    char codigo2[4] = "D02";
+    char nomeCidade2[50] = "Londrina";
+    int populacao2 = 580870;
+    float area2 = 1650.0;
+    float pib2 = 26.14;
+    int pontosTuristicos2 = 15;
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+    // Escolha do usuário
+    int escolha;
+    printf("\nEscolha uma carta para visualizar (1 para Fortaleza, 2 para Londrina): ");
+    scanf("%d", &escolha);
+    
+    // Exibição da carta escolhida
+    if (escolha == 1) {
+        printf("\nCarta 1:\n");
+        printf("Estado: %s %s\n",estado1, complemento);
+        printf("Código: %s\n", codigo1);
+        printf("Nome da Cidade: %s\n", nomeCidade1);
+        printf("População: %d\n", populacao1);
+        printf("Área: %.2f km²\n", area1);
+        printf("PIB: %.2f bilhões de reais\n", pib1);
+        printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    } else if (escolha == 2) {
+        printf("\nCarta 2:\n");
+        printf("Estado: %s\n", estado2);
+        printf("Código: %s\n", codigo2);
+        printf("Nome da Cidade: %s\n", nomeCidade2);
+        printf("População: %d\n", populacao2);
+        printf("Área: %.2f km²\n", area2);
+        printf("PIB: %.2f bilhões de reais\n", pib2);
+        printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    } else {
+        printf("\nEscolha inválida!\n");
+    }
+    
     return 0;
 }
